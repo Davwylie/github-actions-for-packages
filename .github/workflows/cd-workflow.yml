@@ -1,5 +1,5 @@
 # This file wont do us much good in this location, make sure you change the path as directed to continue!
-
+#updating
 name: Node CI
 
 on:
@@ -57,7 +57,7 @@ jobs:
       with:
         name: webpack artifacts
         path: public
-    - name: Build container image v2
+    - name: Build container image
       uses: docker/build-push-action@v2
       with:
         username: ${{github.actor}}
