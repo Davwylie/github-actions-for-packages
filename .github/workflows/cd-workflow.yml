@@ -1,5 +1,4 @@
 # This file wont do us much good in this location, make sure you change the path as directed to continue!
-#updating
 name: Node CI
 
 on:
@@ -34,7 +33,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - uses: actions/download-artifact@master
+      - uses: actions/download-artifact@main
         with:
           name: webpack artifacts
           path: public
@@ -57,7 +56,7 @@ jobs:
       with:
         name: webpack artifacts
         path: public
-    - name: Build container image
+    - name: Build container image v2
       uses: docker/build-push-action@v2
       with:
         username: ${{github.actor}}
